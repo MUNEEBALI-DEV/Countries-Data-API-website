@@ -1,16 +1,16 @@
-const lenis = new Lenis({
-  lerp: 0.15, // Controls the smoothness (lower is smoother)
-  wheelMultiplier: 1, // Adjusts scroll speed
-  smooth: true,
-  smoothTouch: true, // Enables smooth scrolling on touch devices
-});
+// const lenis = new Lenis({
+//   lerp: 0.15, // Controls the smoothness (lower is smoother)
+//   wheelMultiplier: 1, // Adjusts scroll speed
+//   smooth: true,
+//   smoothTouch: true, // Enables smooth scrolling on touch devices
+// });
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
+// function raf(time) {
+//   lenis.raf(time);
+//   requestAnimationFrame(raf);
+// }
 
-requestAnimationFrame(raf);
+// requestAnimationFrame(raf);
 
 
 

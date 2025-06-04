@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   font-family: "Nunito";
 }
@@ -141,7 +139,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color:hsl(0, 100%, 100%);
+  background-color: hsl(0, 100%, 100%);
   border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -183,20 +181,18 @@ body.dark-mode-active {
   color: white;
 }
 
-
 body.dark-mode-active .card,
 body.dark-mode-active .search-div,
 body.dark-mode-active .search-input,
 body.dark-mode-active .filter,
-body.dark-mode-active .main-container
- {
+body.dark-mode-active .main-container {
   background-color: hsl(209, 23%, 22%);
   color: white;
 }
 
 /* Spineer Code */
-.spiner{
-  background:rgb(0,30,49);
+.spiner {
+  background: rgb(0, 30, 49);
   background-image: url(assets/css/spinner.gif);
   background-position: center center;
   background-repeat: no-repeat;
@@ -206,9 +202,29 @@ body.dark-mode-active .main-container
   position: fixed;
   z-index: 100;
 }
+@media (max-width:768px){
+  .search-filter {
+    padding-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+.search-div {
+    max-width: 250px;
+}
+.heading {
+   font-size: larger;
+}
+
+  .dark-mode {
+    font-size: medium;
+}
+
+}
 /* Lenis smooth scroll */
 
-html.lenis, html.lenis body {
+/* html.lenis, html.lenis body {
   height: auto;
 }
 
@@ -226,4 +242,4 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
-}
+} */
