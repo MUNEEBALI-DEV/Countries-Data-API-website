@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: "Nunito";
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.header-container {
+  padding-top: 8px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.heading {
+  font-weight: 700;
+}
+
+.dark-mode {
+  font-weight: 400;
+  height: 15px;
+  cursor: pointer;
+}
+.main-container {
+  background-color: hsl(0, 0%, 99%);
+  /* background-color:hsl(207, 26%, 17%); */
+}
+
+.main-container p {
+  margin: 0;
+}
+.card-title {
+  font-size: large;
+  font-weight: 800;
+}
+.card {
+  height: 400px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  background-color: hsl(0, 100%, 100%);
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.img-div {
+  height: 180px;
+}
+
+/* Country HTML code is written here */
+.back-btn {
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-block: 40px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 8px 25px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+.back-btn:hover {
+  transform: scale(1.04);
+}
+.country-img {
+  width: 100%;
+  height: 300px;
+  /* border: 1px solid #ddd; */
+}
+.country-title {
+  font-weight: 800;
+}
+.country-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.country-text p {
+  margin: 0;
+}
+.each-country-container {
+  display: flex;
+  align-items: center;
+}
+
+.each-border-countries {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+.border-country {
+  border: none;
+  outline: none;
+  background: transparent;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 4px 22px;
+  border-radius: 6px;
+  transition: transform 0.1s ease-in-out;
+}
+.border-country:hover {
+  transform: scale(1.05);
+}
+/* Search and Filter Code */
+
+.search-filter {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-div {
+  padding: 10px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color:hsl(0, 100%, 100%);
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.search-input {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 90%;
+}
+.search-input::placeholder {
+  color: gray;
+}
+.search-btn {
+  color: gray;
+  font-size: 22px;
+  cursor: pointer;
+}
+.filter {
+  border: none;
+  outline: none;
+  padding: 10px 25px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* Light Mode (default) */
+body {
+  background-color: hsl(0, 0%, 98%);
+  transition: all 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode-active {
+  background-color: hsl(207, 26%, 17%);
+  color: white;
+}
+
+
+body.dark-mode-active .card,
+body.dark-mode-active .search-div,
+body.dark-mode-active .search-input,
+body.dark-mode-active .filter,
+body.dark-mode-active .main-container
+ {
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+}
+
+/* Spineer Code */
+.spiner{
+  background:rgb(0,30,49);
+  background-image: url(assets/css/spinner.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 10%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+/* Lenis smooth scroll */
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
