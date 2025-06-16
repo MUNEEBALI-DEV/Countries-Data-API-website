@@ -1,41 +1,21 @@
-// const lenis = new Lenis({
-//   lerp: 0.15, // Controls the smoothness (lower is smoother)
-//   wheelMultiplier: 1, // Adjusts scroll speed
-//   smooth: true,
-//   smoothTouch: true, // Enables smooth scrolling on touch devices
-// });
-
-// function raf(time) {
-//   lenis.raf(time);
-//   requestAnimationFrame(raf);
-// }
-
-// requestAnimationFrame(raf);
 
 
-
-
-
-
-
-
-
-
-
+// fetch("https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital")
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((data) => {console.log(data)})
 
 const cardsRow = document.querySelector(".cards-row");
 
-fetch("https://restcountries.com/v3.1/all")
+fetch("https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital")
   .then((res) => {
     return res.json();
   })
   .then((data) => {
     data.forEach((country) => {
-      // console.log(Object.values(country.languages[0]));
-      // console.log(country.cioc)
-      // if (country.borders) {
-      //       console.log(country.borders);
-      //   }
+      
+     
 
       let cardDiv = document.createElement("div");
       cardDiv.className = "col-lg-3 col-md-6";
@@ -79,6 +59,8 @@ function makingEachCountry() {
         return res.json();
       })
       .then((data) => {
+        console.log(data);
+        
         let countryTitle = document.querySelector(".country-title");
         let countryImage = document.querySelector(".country-img");
         let nativeName = document.querySelector(".native-name");
@@ -167,7 +149,8 @@ let cardsContainer = document.querySelector(".cards-row");
 filterBtn?.addEventListener("change", () => {
   cardsContainer.innerHTML = " ";
 
-  fetch("https://restcountries.com/v3.1/all")
+fetch("https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital")
+
     .then((res) => {
       return res.json();
     })
@@ -216,7 +199,7 @@ let filterOpt = document.querySelector(".filter");
 
 filterOpt?.addEventListener("change", (e) => {
   cardsContainer.innerHTML = " ";
-  fetch("https://restcountries.com/v3.1/all")
+fetch("https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital")
     .then((res) => {
       return res.json();
     })
